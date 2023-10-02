@@ -1,0 +1,10 @@
+{
+    "make": "Kawasaki",
+    "model": "Ninja 400",
+    "year": 2020,
+    "color": "Green",
+    "mileage": 1200,
+    "engine_displacement": 399,
+    "top_speed": 120,
+    "price": 6000
+  }

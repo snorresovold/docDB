@@ -1,0 +1,11 @@
+{
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "year": 2019,
+    "color": "Red",
+    "mileage": 20000,
+    "fuel_type": "Gasoline",
+    "transmission": "Automatic",
+    "engine_size": 1.5,
+    "price": 20000
+  }

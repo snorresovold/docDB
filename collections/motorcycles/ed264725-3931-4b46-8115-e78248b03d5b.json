@@ -1,0 +1,10 @@
+{
+    "make": "Suzuki",
+    "model": "GSX-R750",
+    "year": 2019,
+    "color": "Blue",
+    "mileage": 1500,
+    "engine_displacement": 749,
+    "top_speed": 170,
+    "price": 9500
+  }

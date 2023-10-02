@@ -1,0 +1,11 @@
+{
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2021,
+    "color": "Blue",
+    "mileage": 12000,
+    "fuel_type": "Gasoline",
+    "transmission": "Automatic",
+    "engine_size": 1.8,
+    "price": 22000
+  }

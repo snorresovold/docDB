@@ -1,0 +1,11 @@
+{
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2022,
+    "color": "Silver",
+    "mileage": 15000,
+    "fuel_type": "Gasoline",
+    "transmission": "Automatic",
+    "engine_size": 2.5,
+    "price": 25000
+  }

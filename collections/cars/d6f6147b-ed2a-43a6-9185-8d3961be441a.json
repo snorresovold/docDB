@@ -1,0 +1,11 @@
+{
+    "make": "Ford",
+    "model": "Escape",
+    "year": 2020,
+    "color": "Black",
+    "mileage": 18000,
+    "fuel_type": "Hybrid",
+    "transmission": "Automatic",
+    "engine_size": 2.5,
+    "price": 28000
+  }

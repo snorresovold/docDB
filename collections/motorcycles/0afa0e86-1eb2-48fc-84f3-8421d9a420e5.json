@@ -1,0 +1,10 @@
+{
+    "make": "Honda",
+    "model": "CBR600RR",
+    "year": 2022,
+    "color": "Red",
+    "mileage": 1000,
+    "engine_displacement": 599,
+    "top_speed": 160,
+    "price": 11000
+  }
