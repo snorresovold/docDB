@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+	"os"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -8,7 +10,7 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/snorresovold/docDB/filesys"
+	"github.com/snorresovold/docDB/backend/filesys"
 )
 
 func createCollection(c *gin.Context) {
@@ -60,6 +62,21 @@ func getCollection(c *gin.Context) {
 	out := filesys.GetCollection(collection)
 	c.IndentedJSON(http.StatusOK, out)
 }
+
+func getCollections(c *gin.Context) {
+    entries, err := os.ReadDir("./collections")
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    var collections []string
+    for _, e := range entries {
+        collections = append(collections, e.Name())
+    }
+
+    c.IndentedJSON(http.StatusOK, collections)
+}
+
 func getDocument(c *gin.Context) {
 	collection := c.Param("collection")
 	document := c.Param("document")
@@ -70,6 +87,7 @@ func getDocument(c *gin.Context) {
 func main() {
 	r := gin.Default()
 	r.Use(cors.Default())
+	r.GET("/getCollections", getCollections)
 	r.GET("/getCollection/:collection", getCollection)
 	r.GET("/getDocument/:collection/:document", getDocument)
 	r.POST("/createCollection/:name", createCollection)

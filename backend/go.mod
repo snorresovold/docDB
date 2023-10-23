@@ -1,4 +1,4 @@
-module github.com/snorresovold/docDB
+module github.com/snorresovold/docDB/backend
 
 go 1.21.1
 
