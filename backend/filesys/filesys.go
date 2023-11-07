@@ -3,7 +3,6 @@ package filesys
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"strings"
@@ -12,7 +11,7 @@ import (
 )
 
 type Document struct {
-	Id             string `json:"id"`
+	Id      string                 `json:"id"`
 	Content map[string]interface{} `json:"content"`
 }
 
@@ -30,7 +29,7 @@ func GetCollection(collection string) Collection {
 	}
 	for _, e := range entries {
 		doc := Document{Id: e.Name()}
-		content, err := ioutil.ReadFile("./collections/" + collection + "/" + e.Name())
+		content, err := os.ReadFile("./collections/" + collection + "/" + e.Name())
 		if err != nil {
 			log.Printf("Error reading file '%s': %s", e.Name(), err)
 		} else {
@@ -93,7 +92,7 @@ func WriteToDocument(collection string, document string, data map[string]interfa
 		fmt.Println(err, "error") //print the error on the console
 		return
 	}
-	_ = os.WriteFile("collections/" +collection+"/"+document+".json", jsonData, 0755)
+	_ = os.WriteFile("collections/"+collection+"/"+document+".json", jsonData, 0755)
 }
 
 func DeleteCollection(collection string) {
